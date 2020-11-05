@@ -12,8 +12,11 @@ ingredient_url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 list = RestClient.get(ingredient_url)
 result = JSON.parse(list)
 
-puts 'Destroying all Ingredients'
+puts 'Destroying everything'
+
+Cocktail.destroy_all
 Ingredient.destroy_all
+
 puts 'Creating fake ingredients'
 
 result['drinks'].each do |ingredient|

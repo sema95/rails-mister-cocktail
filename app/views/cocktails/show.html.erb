@@ -3,8 +3,8 @@
 <ul class="list-group">
   <% @cocktail.doses.each do |dose| %>
     <li class="list-group-item">
-      <%= "#{dose.description}" %>
-      <%= link_to 'Delete', dose_path(dose), method: :delete %></li>
+      <%= "#{dose.description} - #{dose.ingredient.name}" %>
+      <%= link_to '🗑', dose_path(dose), method: :delete %></li>
   <% end %>
 </ul>
 <br>
