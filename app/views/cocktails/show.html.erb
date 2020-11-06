@@ -1,4 +1,5 @@
 <h2><%= @cocktail.name %></h2>
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
 
 <ul class="list-group">
   <% @cocktail.doses.each do |dose| %>
@@ -11,4 +12,3 @@
 <p><%= link_to 'Show all cocktails', root_path %></p>
 <p><%= link_to 'Add a new Cocktail', new_cocktail_path %></p>
 <p><%= link_to 'Add a new Dose', new_cocktail_dose_path(@cocktail) %></p>
-
