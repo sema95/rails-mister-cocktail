@@ -1,2 +1,16 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.container {
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  justify-content: space-between;
+  display:flex;
+  flex-grow: 0;
+}
